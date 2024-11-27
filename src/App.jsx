@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import ProductList from './ProductList';
+import CartItem from './CartItem';
 import './App.css';
 import AboutUs from './AboutUs';
 
@@ -18,9 +19,9 @@ function App() {
         <div className="background-image"></div>
         <div className="content">
          <div className="landing_content">
-         <h1>Welcome To Paradise Nursery</h1>
+         <h1>Welcome To Dokani Store</h1>
           <div className="divider"></div>
-          <p>Where Green Meets Serenity</p>
+          <p>Your Online Destination for an Exceptional Lifestyle</p>
          
           <button className="get-started-button" onClick={handleGetStartedClick}>
             Get Started
@@ -34,6 +35,10 @@ function App() {
       </div>
       <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
         <ProductList />
+      </div>
+
+      <div className="product-list-container">
+        <CartItem />
       </div>
     </div>
   );
